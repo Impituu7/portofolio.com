@@ -215,15 +215,6 @@ main {
     max-width: 600px;
     overflow: hidden;
 }
-.slide {
-    min-width: 100%;
-    user-select: none;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.show {
-    display: block;
-}
 footer {
     background-color: rgba(0, 51, 102, 0.8);
     color: white;
