@@ -221,6 +221,9 @@ main {
     border-radius: 10px;
     overflow: hidden;
 }
+.show {
+    display: block !important;
+}
 footer {
     background-color: rgba(0, 51, 102, 0.8);
     color: white;
