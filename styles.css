@@ -113,6 +113,7 @@ main {
     padding: 20px;
     border-radius: 10px;
     white-space: pre-line;
+    overflow: hidden;
 }
 .introf {
     background-color: rgba(0, 102, 204, 0.8);
