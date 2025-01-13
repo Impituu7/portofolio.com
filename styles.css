@@ -222,7 +222,7 @@ main {
     overflow: hidden;
 }
 .show {
-    display: block !important;
+    display: block;
 }
 footer {
     background-color: rgba(0, 51, 102, 0.8);
