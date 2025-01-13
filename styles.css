@@ -213,7 +213,6 @@ main {
     width: 100%;
     transition: transform 0.5s ease-in-out;
     max-width: 600px;
-    overflow: hidden;
 }
 footer {
     background-color: rgba(0, 51, 102, 0.8);
