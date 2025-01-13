@@ -213,6 +213,7 @@ main {
     width: 100%;
     transition: transform 0.5s ease-in-out;
     max-width: 600px;
+    overflow: hidden;
 }
 .slide {
     min-width: 100%;
