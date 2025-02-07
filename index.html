@@ -7,31 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Selamat Datang di Portofolio Saya</h1>
-    <nav>
-        <ul>
-            <li><a href="#TentangSaya">Tentang Saya</a></li>
-            <li><a href="#KaryaSaya">Karya Saya</a></li>
-            <li><a href="">Prestasi</a></li>
-        </ul>
-    </nav>
+<header>
+    <div class="header-content">
+      <a href="#" class="logo">
+        <img src="d:\coding\portofolio.com-main1\gambar\TRANSPARAN.png" alt="Logo">
+      </a>
+      <h2>PORTOFOLIO</h2>
+    <span style="font-size:20px;cursor:pointer;margin:25px;" onclick="openNav()">&#9776;</span>
+    </div>
+    <div id="mySidenav" class="sidenav" class="header-content">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Lorem Ipsum</a>
+        <a href="#">Lorem Ipsum</a>
+        <a href="https://sites.google.com/view/halovrienden?fbclid=PAZXh0bgNhZW0CMTEAAabL8ILjYPQ40wpSjd1xOLyR2H32xTFXhz-w5BNaywq0VOOozjMl2h1HfRg_aem_9eGdbzICYyd7R0ZKI6ZRvA">Halo Vrienden</a>
+        <a href="#">Lorem Ipsum</a>
+      </div>
+      <script src="OPENAV.js"></script>
     </header>
 <body>
     <main>
         <div class="intro2">
         <div class="section1">
-            <section id="TentangSaya" class="intro2"></div>
+            <section id="TentangSaya">
             <h2>Tentang Saya</h2>
-        </section>
-        <div class="section1"><section class="intro2"></div>
         </section>
         </div>
     </main>
     <main>
         <section class="introf">
             <div class="image-container">
-                <img src="Desain tanpa judul.png" alt="Your Logo" class="renponsive-img" class="container-img">
+                <img src="d:\coding\portofolio.com-main1\gambar\Desain tanpa judul.png" alt="Your Logo" class="renponsive-img" class="container-img">
             </div>
             <div class="row">
                 <div class="p1">
@@ -72,125 +77,54 @@
     </div>
     <main>
         <div class="intro2">
-        <div class="section1"><section class="intro2" id="KaryaSaya"></div>
+        <div class="section1">
+            <section id="KaryaSaya">
             <h2>Karya Saya</h2>
-        </section>
-        <div class="section1"><section class="intro2"></div>
         </section>
         </div>
     </main>
     <main>
         <div class="intro2">
-        <div class="section1">
-            <section id="KaryaSaya">
+        <div class="section2">
             <h2>Illustrasi</h2>
         </section>
     </div>
     </main>
     <main>
-    <div class="sectionbersatoe" class="slider-container">
+    <div class="slider-container">
         <section class="intro">
-        <div class="slider">
-            <img class="slide" src="SILVIA.png" alt="Gambar 1" width="500px">
-            <img class="slide" src="SILVIA.png" alt="Gambar 2" width="500px">
-            <img class="slide" src="ini yang udah dianuin.png" alt="Gambar 3" width="500px">
-        </section>
+            <div class="slider">
+                <div class="slide"><img src="d:\coding\portofolio.com-main1\gambar\dia.PNG" alt="Image 1"></div>
+                <div class="slide"><img src="d:\coding\portofolio.com-main1\gambar\ini yang udah dianuin.png" alt="Image 2"></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1724875299388-7257f4af1cf9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3"></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1724770646663-2a806ed04ca4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4"></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1723675510074-6e9f59fd3af0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 5"></div>
+                <div class="slide"><img src="https://images.unsplash.com/photo-1724690416953-c787bc34b56f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 6"></div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
         </div>
-<script>
-    let currentSlide = 0;
-    let startX, currentX, isDragging = false;
-
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slider');
-    
-    slider.addEventListener('mousedown', (event) => {
-        startX = event.pageX;
-        isDragging = true;
-    });
-
-    slider.addEventListener('mousemove', (event) => {
-        if (isDragging) {
-            currentX = event.pageX;
-            const distance = currentX - startX;
-            slider.style.transform = `translateX(${distance}px)`;
-        }
-    });
-
-    slider.addEventListener('mouseup', (event) => {
-        isDragging = false;
-        if (currentX - startX < -50) {
-            showSlide(currentSlide + 1);
-        } else if (currentX - startX > 50) {
-            showSlide(currentSlide - 1);
-        } else {
-            showSlide(currentSlide);
-        }
-    });
-
-    slider.addEventListener('mouseleave', () => {
-        isDragging = false;
-    });
-
-    slider.addEventListener('touchstart', (event) => {
-        startX = event.touches[0].pageX;
-        isDragging = true;
-    });
-
-    slider.addEventListener('touchmove', (event) => {
-        if (isDragging) {
-            currentX = event.touches[0].pageX;
-            const distance = currentX - startX;
-            slider.style.transform = `translateX(${distance}px)`;
-        }
-    });
-
-    slider.addEventListener('touchend', (event) => {
-        isDragging = false;
-        if (currentX - startX < -50) {
-            showSlide(currentSlide + 1);
-        } else if (currentX - startX > 50) {
-            showSlide(currentSlide - 1);
-        } else {
-            showSlide(currentSlide);
-        }
-    });
-
-    function showSlide(index) {
-        const totalSlides = slides.length;
-        
-        if (index >= totalSlides) {
-            currentSlide = 0;
-        } else if (index < 0) {
-            currentSlide = totalSlides - 1;
-        } else {
-            currentSlide = index;
-        }
-
-        const offset = -currentSlide * 100;
-        slider.style.transform = `translateX(${offset}%)`;
-    }
-
-    showSlide(currentSlide);
-</script>
+        <div class="dots-container" class="intro">
+            <span class="dot" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+            <span class="dot" data-index="5"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </main>
 </div>
-    <footer>
-        <section id="tentang-pembuat">
-            <h3>Tentang Pembuat</h3>
-            <p>Website ini dibuat oleh Raditya Fakhri Nararya.</p>
-        </section>
-        <section id="copyright">
-            <h3>Copyright</h3>
-            <p>© 2024 Impituu7. Semua hak dilindungi.</p>
-        </section>
-        <section id="sosial-media">
-            <h3>Sosial Media</h3>
-            <ul>
-                <li><a href="https://www.instagram.com/impituu7/">Instagram</a></li>
-            </ul>
-        </section>
-        <section id="tentang-pembuat">
-            <p>Ver 1.10</p>
-    </footer>
+  <footer>
+    <div class="footer">
+        <p>&copy; Copyright 2025 - Impituu7</p>
+    </div>
+      <div class="footer">
+        <a href="https://www.instagram.com/impituu7/">
+            <img src="d:\coding\portofolio.com-main1\gambar\logo ig.png" alt="ig" width="25px" height="25px">
+          </a>
+    </div>
+  </footer>
 </body>
 </html>
